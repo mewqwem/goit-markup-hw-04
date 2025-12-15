@@ -134,7 +134,7 @@ p {
   letter-spacing: 0.02em;
 }
 .icon {
-  fill: white;
+  fill: #f4f4fd;
 }
 .contacts-icon-list {
   display: flex;
@@ -144,9 +144,6 @@ p {
 .contacts-icon-item {
   width: 40px;
   height: 40px;
-  background-color: #4d5ae5;
-  border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-icon-link {
   display: flex;
@@ -154,10 +151,12 @@ p {
   align-items: center;
   width: 100%;
   height: 100%;
-}
-.contacts-icon-item:hover {
-  background-color: #31d0aa;
+  background-color: #4d5ae5;
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts-icon-link:hover {
+  background-color: #404bbf;
 }
 /* #endregion */
 /* #region Card-set */
@@ -177,6 +176,8 @@ p {
   padding-left: 156px;
   padding-right: 156px;
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 .header-container {
   display: flex;
@@ -205,12 +206,12 @@ p {
 .nav-links.active::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -1;
   left: 0;
   display: block;
   width: 100%;
   height: 4px;
-  background-color: #4d5ae5;
+  background-color: #404bbf;
   border-radius: 2px;
 }
 .nav-links:hover,
@@ -256,8 +257,9 @@ p {
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/hero/people-office\ 1.jpg);
+  max-width: 1440px;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
 }
 .page-title {
@@ -325,6 +327,8 @@ p {
   background-color: #ffffff;
   text-align: center;
   letter-spacing: 0.02em;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 .team-title {
   line-height: 1.2;
@@ -357,6 +361,10 @@ p {
   --indent-y: 24px;
   --indent-x: 48px;
 }
+.portfolio-item:hover {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
 .portfolio-item:hover .overlay {
   transform: translateY(0);
   /* transform: scale(1); */
@@ -377,9 +385,7 @@ p {
   left: 0;
   transform: translateY(100%);
   /* transform: scale(0); */
-  transition-property: transform, color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   font-size: 16px;
   line-height: 1.5;
@@ -408,13 +414,19 @@ p {
 }
 .footer-container {
   display: flex;
-  gap: 120px;
+  align-items: baseline;
+  margin-right: 120px;
 }
 .footer-contacts-list {
   gap: 16px;
 }
 .footer-contacts > p {
   margin-bottom: 16px;
+  font-weight: 500;
+  color: #ffffff;
+}
+.footer-contacts-link:hover {
+  background-color: #31d0aa;
 }
 /* #endregion */
 
