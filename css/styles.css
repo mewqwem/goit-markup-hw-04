@@ -207,7 +207,7 @@ p {
 .nav-links.active::after {
   content: "";
   position: absolute;
-  bottom: -1;
+  bottom: -1px;
   left: 0;
   display: block;
   width: 100%;
